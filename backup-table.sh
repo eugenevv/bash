@@ -9,4 +9,4 @@ fi
 NOW=$(date +"%Y%m%d%H%M%S");
 fileName="$NOW-DB-$1";
 
-mysqldump -u USER -pPASSWORD DB $1 | gzip > ~/backup/$fileName.sql.gz && ls -la ~/backup
+mysqldump -h HOST -u USER -pPASSWORD DB $1 | gzip > ~/backup/$fileName.sql.gz && ls -la ~/backup
